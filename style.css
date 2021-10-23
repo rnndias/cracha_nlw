@@ -18,9 +18,29 @@ body {
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/my_background_mobile.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+
+  position: relative;
+}
+
+.ribbon {
+  background: url(images/my_ribbon.svg) no-repeat center/cover;
+  position: absolute;
+  left: calc(50% - 32px);
+  height: 12.6rem;
+  width: 4rem;
+  z-index: 1;
+  opacity: 0;
+}
+
+.break {
+  position: absolute;
+  left: calc(50% - 40px);
+  top: 12rem;
+  opacity: 0;
 }
 
 .container {
@@ -87,4 +107,41 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+/* desktop e tablet */
+@media (min-width: 500px) {
+  main {
+    background: url(images/my_background_desktop.svg) no-repeat center/cover;
+    width: 100vw;
+    min-height: 1000px;
+    height: 100vh;
+  }
+
+  .container {
+    background: url(images/my_background.svg) no-repeat center;
+    max-width: 300px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    padding-top: 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    color: var(--gray);
+  }
+
+  .avatar {
+    width: 10rem;
+    margin: 0 auto 0;
+
+    position: relative;
+  }
+
+  .ribbon {
+    opacity: 1;
+  }
+
+  .break {
+    opacity: 1;
+  }
 }
